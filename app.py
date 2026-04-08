@@ -16,8 +16,9 @@ st.header("🔢 احسب وفرك الشهري")
 with st.expander("اضغط هنا لتجربة الحاسبة التفاعلية"):
     col1, col2 = st.columns(2)    
 import streamlit as st
+
 tab_students, tab_staff, tab_doctors = st.tabs(["🎓 قسم الطلاب", "💼 قسم الموظفين", "🧪 قسم الدكاترة"])
- with tab_students:
+with tab_students:
     st.subheader("💡 نصائح ذهبية لطلاب جامعة السادات")
     st.markdown("""
     * **افصل الشاحن:** شواحن الموبايل واللابتوب بتسحب طاقة وهي في الفيشة.. افصلها فوراً.
