@@ -17,11 +17,21 @@ with st.expander("اضغط هنا لتجربة الحاسبة التفاعلية
     col1, col2 = st.columns(2)    
 import streamlit as st
 with col1:
-device_type = st.selectbox("اختار أكتر جهاز بتستخدمه:", ["تكييف", "سخان كهربائي", "غلاية مياه (كاتل)", "إضاءة عادية"])
+device_type = st.selectbox(اختار أكتر جهاز بتستخدمه:", ["تكييف", "سخان كهربائي", "غلاية مياه (كاتل)", "إضاءة عادية"])
         hours = st.slider("ساعات التشغيل اليومية:", 1, 24, 5)
 with col2:
         electricity_price = 1.5  # متوسط سعر الكيلوواط (يمكن تحديثه)
-        st.write(f"سعر الكيلوواط المعتمد: {electricity_price} ج.م")        
+    st.write(f"سعر الكيلوواط المعتمد: {electricity_price} ج.م")        
+  # معادلة بسيطة للحساب (استهلاك افتراضي لكل جهاز)
+    power_map = {"تكييف": 2.5, "سخان كهربائي": 2.0, "غلاية مياه (كاتل)": 1.5, "إضاءة عادية": 0.1}
+    consumption = hours * power_map[device_type] * 30
+    monthly_cost = consumption * electricity_price
+    potential_savings = monthly_cost * 0.25 # افتراض توفير 25% بالترشيد
+    if st.button("احسب الآن"):
+        st.success(f"تكلفة استهلاك هذا الجهاز شهرياً: {monthly_cost:.2f} ج.م")
+        st.info(f"💡 باتباع نصائح الترشيد، تقدر توفر حوالي **{potential_savings:.2f} جنيه** شهرياً!")
+   
+    # إنشاء التبويبات 
 tab_students=[("قسم الطلاب👩‍🔬")]
 with tab_students:
     st.subheader("💡 نصائح ذهبية لطلاب جامعة السادات")
@@ -52,16 +62,7 @@ with tab_doctors:
     """)
     with 
 
-    # معادلة بسيطة للحساب (استهلاك افتراضي لكل جهاز)
-    power_map = {"تكييف": 2.5, "سخان كهربائي": 2.0, "غلاية مياه (كاتل)": 1.5, "إضاءة عادية": 0.1}
-    consumption = hours * power_map[device_type] * 30
-    monthly_cost = consumption * electricity_price
-    potential_savings = monthly_cost * 0.25 # افتراض توفير 25% بالترشيد
-
-    if st.button("احسب الآن"):
-        st.success(f"تكلفة استهلاك هذا الجهاز شهرياً: {monthly_cost:.2f} ج.م")
-        st.info(f"💡 باتباع نصائح الترشيد، تقدر توفر حوالي **{potential_savings:.2f} جنيه** شهرياً!")
-
+    
 st.markdown("---")
 
 # --- القسم الثاني: نصائح الترشيد (مقسمة لسهولة القراءة) ---
