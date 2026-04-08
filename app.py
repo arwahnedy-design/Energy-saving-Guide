@@ -17,7 +17,7 @@ with st.expander("اضغط هنا لتجربة الحاسبة التفاعلية
     col1, col2 = st.columns(2)    
 import streamlit as st
 with col1:
-device_type = st.selectbox(اختار أكتر جهاز بتستخدمه:", ["تكييف", "سخان كهربائي", "غلاية مياه (كاتل)", "إضاءة عادية"])
+device_type = st.selectbox("اختار أكتر جهاز بتستخدمه:", ["تكييف", "سخان كهربائي", "غلاية مياه (كاتل)", "إضاءة عادية"])
         hours = st.slider("ساعات التشغيل اليومية:", 1, 24, 5)
 with col2:
         electricity_price = 1.5  # متوسط سعر الكيلوواط (يمكن تحديثه)
