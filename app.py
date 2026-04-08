@@ -96,6 +96,17 @@ with tab3:
     * **اللمبات الليد:** استبدل اللمبات العادية بلمبات LED (بتوفر لحد 80% من طاقة الإضاءة).
     * **الضوء الطبيعي:** اعتمد على ضوء الشمس في فترة النهار.
     """)
+# --- تذليل الصفحة (Footer) مع الشعار ---
+st.markdown("---")
+st.markdown(
+    """
+    <div style='text-align: center; background-color: #f0f2f6; padding: 20px; border-radius: 10px;'>
+        <h2 style='color: #2e7d32; font-family: Cairo, sans-serif;'>جامعتنا واعية... طاقتنا آمنة</h2>
+        <p style='color: #555;'>مشروع ترشيد استهلاك الطاقة - جامعة السادات</p>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 
 # --- الخاتمة وحقوق المشروع ---
 st.markdown("---")
