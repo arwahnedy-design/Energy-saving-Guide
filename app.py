@@ -29,12 +29,12 @@ with tab_students:
     """)
 
 
-with tab2:
+with tab_staff:
     st.subheader("📋 تعليمات الكادر الإداري")
     st.write("- تفعيل وضع السكون للأجهزة.")
     st.write("- تقليل الاعتماد على الطباعة الورقية.")
 
-with tab3:
+with tab_doctors:
     st.subheader("🔬 دليل المعامل والقاعات")
     st.write("- غلق أجهزة التسخين والشفاطات فور انتهاء التجارب.")
     st.write("- ضبط التكييفات على درجة 24 مئوية.")
