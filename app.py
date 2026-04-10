@@ -112,3 +112,22 @@ st.markdown(
 st.markdown("---")
 st.caption("تم تطوير هذا التطبيق لدعم حملة نشر ثقافة ترشيد الطاقة - جامعة مدينة السادات الاهلية .")
 st.write("🌱 نحو مستقبل أكثر استدامة.")
+# --- قسم الإهداء والإشراف (في نهاية الصفحة) ---
+st.markdown("---")
+st.markdown(
+    """
+    <div style='text-align: center; border: 2px solid #2e7d32; padding: 15px; border-radius: 15px; background-color: #ffffff;'>
+        <p style='font-size: 18px; font-weight: bold; color: #1a5e20;'>
+            🎁 إهداء من طلبة كلية العلوم - جامعة مدينة السادات الأهلية
+        </p>
+        <hr style='border: 0.5px solid #eee;'>
+        <p style='font-size: 16px; margin-bottom: 5px;'><b>تحت إشراف:</b></p>
+        <h3 style='color: #2c3e50; margin-top: 0;'>أ.د/ خالد الكيلاني</h3>
+        <p style='color: #7f8c8d; font-weight: bold;'>مدير البرامج</p>
+        <br>
+        <p style='font-size: 16px; margin-bottom: 5px;'><b>منسق النشاط:</b></p>
+        <h3 style='color: #2c3e50; margin-top: 0;'>د/ علياء محمد</h3>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
