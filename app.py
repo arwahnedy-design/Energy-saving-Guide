@@ -113,35 +113,28 @@ st.markdown("---")
 st.caption("تم تطوير هذا التطبيق لدعم حملة نشر ثقافة ترشيد الطاقة - جامعة مدينة السادات الاهلية .")
 st.write("🌱 نحو مستقبل أكثر استدامة.")
 
-#--- القسم الرابع: الإهداء والإشراف وإعداد الطالبة) ---
-st.markdown(
-    """
-    <div style='text-align: center; border: 2px solid #2e7d32; padding: 20px; border-radius: 15px; background-color: #ffffff; margin-top: 20px; box-shadow: 2px 2px 12px rgba(0,0,0,0.1);'>
-        <p style='font-size: 18px; font-weight: bold; color: #1a5e20; margin-bottom: 15px;'>
-            إهداء من طلبة كلية العلوم - جامعة مدينة السادات الأهلية
-        </p>
-        
-        <div style='background-color: #e8f5e9; padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #c8e6c9;'>
-            <p style='margin-bottom: 5px; font-size: 16px; color: #333;'><b>إعداد الطالبة:</b></p>
-            <h2 style='color: #2e7d32; margin-top: 0;'>أروى عطاء الدين عصام</h2>
-        </div>
+# #--- القسم الرابع: الإهداء والإشراف 
+st.markdown("---")
+with st.container():
+    st.write("### 🎁 إهداء من طلبة كلية العلوم - جامعة مدينة السادات الأهلية")
+    
+    # مربع خاص لاسمك عشان يبرز
+    st.info("### إعداد الطالبة: أروى عطاء الدين عصام")
+    
+    st.write("---")
+    
+    # توزيع أسماء الدكاترة في أعمدة
+    col_dr1, col_dr2 = st.columns(2)
+    with col_dr1:
+        st.write("**تحت إشراف:**")
+        st.write("#### أ.د/ خالد الكيلاني")
+        st.write("مدير البرامج")
+    
+    with col_dr2:
+        st.write("**منسق النشاط:**")
+        st.write("#### د/ علياء محمد")
 
-        <hr style='border: 0.5px solid #eee;'>
-        
-        <div style='display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;'>
-            <div style='min-width: 180px;'>
-                <p style='font-size: 14px; margin-bottom: 5px;'><b>تحت إشراف:</b></p>
-                <h4 style='color: #2c3e50; margin-top: 0;'>أ.د/ خالد الكيلاني</h4>
-                <p style='color: #7f8c8d; font-size: 13px;'>مدير البرامج</p>
-            </div>
-            <div style='min-width: 180px;'>
-                <p style='font-size: 14px; margin-bottom: 5px;'><b>منسق النشاط:</b></p>
-                <h4 style='color: #2c3e50; margin-top: 0;'>د/ علياء محمد</h4>
-            </div>
-        </div>
-    </div>
-    """, 
-    unsafe_allow_html=True)
+st.balloons() # حركة احتفالية لما الموقع يفتح
 
 
 
