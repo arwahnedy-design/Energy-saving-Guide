@@ -113,7 +113,7 @@ st.markdown("---")
 st.caption("تم تطوير هذا التطبيق لدعم حملة نشر ثقافة ترشيد الطاقة - جامعة مدينة السادات الاهلية .")
 st.write("🌱 نحو مستقبل أكثر استدامة.")
 
-# --- القسم الرابع: الإهداء والإشراف وإعداد الطالبة ---
+#--- القسم الرابع: الإهداء والإشراف وإعداد الطالبة) ---
 st.markdown(
     """
     <div style='text-align: center; border: 2px solid #2e7d32; padding: 20px; border-radius: 15px; background-color: #ffffff; margin-top: 20px; box-shadow: 2px 2px 12px rgba(0,0,0,0.1);'>
@@ -143,6 +143,7 @@ st.markdown(
     """, 
     unsafe_allow_html=True
 )
+
 
 
 
