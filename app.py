@@ -123,34 +123,29 @@ st.markdown(
 # --- قسم الإهداء، الإشراف، وإعداد الطالبة (نهاية الصفحة) ---
 st.markdown("---")
 st.markdown(
-    """
-    <div style='text-align: center; border: 2px solid #2e7d32; padding: 20px; border-radius: 15px; background-color: #ffffff; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);'>
-        <p style='font-size: 18px; font-weight: bold; color: #1a5e20; margin-bottom: 10px;'>
-            🎁 إهداء من طلبة كلية العلوم - جامعة مدينة السادات الأهلية
-        </p>
-        
+    ""
+ <div style='text-align: center; border: 2px solid #2e7d32; padding: 20px; border-radius: 15px; background-color: #ffffff; margin-top: 20px;'>
+        <p style='font-size: 18px; font-weight: bold; color: #1a5e20;'>🎁 إهداء من طلبة كلية العلوم - جامعة مدينة السادات الأهلية</p>
         <div style='background-color: #f1f8e9; padding: 10px; border-radius: 10px; margin-bottom: 15px;'>
-            <p style='font-size: 16px; margin-bottom: 5px; color: #333;'><b>إعداد الطالبة:</b></p>
+            <p style='margin-bottom: 5px;'><b>إعداد الطالبة:</b></p>
             <h3 style='color: #2e7d32; margin-top: 0;'>أروى عطاء الدين عصام</h3>
         </div>
-
-        <hr style='border: 0.5px solid #eee;'>
-        
+        <hr>
         <div style='display: flex; justify-content: space-around; flex-wrap: wrap;'>
-            <div style='min-width: 200px;'>
-                <p style='font-size: 15px; margin-bottom: 5px;'><b>تحت إشراف:</b></p>
-                <h4 style='color: #2c3e50; margin-top: 0;'>أ.د/ خالد الكيلاني</h4>
-                <p style='color: #7f8c8d; font-size: 14px;'>مدير البرامج</p>
+            <div>
+                <p><b>تحت إشراف:</b></p>
+                <h4 style='margin-top: 0;'>أ.د/ خالد الكيلاني</h4>
+                <p style='font-size: 12px;'>مدير البرامج</p>
             </div>
-            <div style='min-width: 200px;'>
-                <p style='font-size: 15px; margin-bottom: 5px;'><b>منسق النشاط:</b></p>
-                <h4 style='color: #2c3e50; margin-top: 0;'>د/ علياء محمد</h4>
+            <div>
+                <p><b>منسق النشاط:</b></p>
+                <h4 style='margin-top: 0;'>د/ علياء محمد</h4>
             </div>
         </div>
     </div>
     """, 
     unsafe_allow_html=True
-)
+)    
 
 
     
