@@ -124,8 +124,7 @@ st.markdown(
 st.markdown("---")
 st.markdown(
     ""
-    <div style='text-align: center; border: 2px solid #2e7d32; padding: 20px; 
-border-radius: 15px; background-color: #ffffff; margin-top: 20px;'>
+    <div style='text-align: center; border: 2px solid #2e7d32; padding: 20px; border-radius: 15px; background-color: #ffffff; margin-top: 20px;'>
             <p style='font-size: 18px; font-weight: bold; color: #1a5e20;'>🎁 إهداء من طلبة كلية العلوم - جامعة مدينة السادات الأهلية</p>
     <div style='background-color: #f1f8e9; padding: 10px; border-radius: 10px; margin-bottom: 15px;'>
             <p style='margin-bottom: 5px;'><b>إعداد الطالبة:</b></p>
