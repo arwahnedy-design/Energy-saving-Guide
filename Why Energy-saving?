@@ -1,0 +1,111 @@
+!sudo apt install libcairo2-dev libpango1.0-dev ffmpeg
+!pip install manim arabic-reshaper python-bidi
+from manim import *
+import arabic_reshaper
+from bidi.algorithm import get_display
+import numpy as np
+
+# دالة لتصحيح اللغة العربية
+def fix(text):
+    return get_display(arabic_reshaper.reshape(text))
+
+class FullEnergyVideo(Scene):
+    def construct(self):
+        # --- المشهد 1: العداد والفيشة والفلوس ---
+        t1 = Text(fix("كل فيشة سايبها.. بتسحب ميزانية بلد!"), font_size=30, color=YELLOW).to_edge(UP)
+        plug = Circle(radius=0.7, color=WHITE).shift(UP*0.5)
+        # رسم فتحات الفيشة
+        hole1 = Dot().move_to(plug.get_center() + LEFT*0.2)
+        hole2 = Dot().move_to(plug.get_center() + RIGHT*0.2)
+        plug_group = VGroup(plug, hole1, hole2)
+        
+        money = VGroup(*[Text("$", color=GREEN).scale(0.7) for _ in range(8)])
+        
+        self.play(Write(t1), Create(plug_group))
+        self.play(
+            *[m.animate.shift(DOWN*4 + RIGHT*np.random.uniform(-3,3)) for m in money],
+            run_time=3, rate_func=linear
+        )
+        self.play(FadeOut(t1), FadeOut(plug_group), FadeOut(money))
+
+        # --- المشهد 2: ميزانية الدولة والجامعة ---
+        t2 = Text(fix("فواتير الكهرباء بتستنزف تطوير المعامل"), font_size=30, color=BLUE).to_edge(UP)
+        uni_building = Square(color=WHITE).scale(1.2)
+        uni_label = Text(fix("الجامعة"), font_size=24).next_to(uni_building, DOWN)
+        
+        bill = Rectangle(width=1.5, height=2, color=RED).shift(RIGHT*3)
+        bill_text = Text(fix("فاتورة"), font_size=20, color=RED).move_to(bill)
+
+        self.play(Write(t2), Create(uni_building), Write(uni_label))
+        self.play(GrowFromCenter(bill), Write(bill_text))
+        self.wait(1)
+        self.play(FadeOut(t2), FadeOut(uni_building), FadeOut(uni_label), FadeOut(bill), FadeOut(bill_text))
+
+        # --- المشهد 3: الأجهزة القديمة والموفرة ---
+        t3 = Text(fix("الأجهزة القديمة بتضغط على الشبكة"), font_size=30, color=ORANGE).to_edge(UP)
+        old_device = RoundedRectangle(color=GRAY).shift(LEFT*2.5)
+        new_device = RoundedRectangle(color=GREEN).shift(RIGHT*2.5)
+        
+        l1 = Text(fix("استهلاك عالي"), font_size=20).next_to(old_device, DOWN)
+        l2 = Text(fix("موفرة للطاقة"), font_size=20).next_to(new_device, DOWN)
+
+        self.play(Write(t3))
+        self.play(Create(old_device), Write(l1))
+        self.play(Create(new_device), Write(l2))
+        
+        # سهم الضغط
+        arrow = Arrow(start=old_device.get_top(), end=UP*2.5, color=RED)
+        self.play(GrowArrow(arrow))
+        self.wait(1)
+        self.play(FadeOut(t3), FadeOut(old_device), FadeOut(new_device), FadeOut(l1), FadeOut(l2), FadeOut(arrow))
+
+        # --- المشهد 4 و 5: الختام ---
+        final_circle = Circle(radius=2, color=GREEN)
+        final_text = Text(fix("الترشيد ذكاء واستثمار"), color=WHITE).scale(1.1)
+        slogan = Text(fix("وفرها لمستقبلك"), color=YELLOW).next_to(final_circle, DOWN)
+
+        self.play(Create(final_circle))
+        self.play(Write(final_text))
+        self.play(Write(slogan))
+        self.play(Indicate(final_text, color=YELLOW))
+        self.wait(2)
+
+from manim import *
+import arabic_reshaper
+from bidi.algorithm import get_display
+
+def fix(text):
+    return get_display(arabic_reshaper.reshape(text))
+
+class VideoEnding(Scene):
+    def construct(self):
+        # 1. العنوان الرئيسي
+        line1 = Text(fix("إهداء من طلاب كلية العلوم"), color=BLUE).scale(0.8)
+        line2 = Text(fix("جامعة السادات الأهلية"), color=BLUE_A).scale(0.6).next_to(line1, DOWN)
+        header = VGroup(line1, line2).to_edge(UP, buff=0.4)
+
+        # 2. أسماء الطالبات (منظمة في سطرين)
+        names = Text(fix("أروى عطاء الدين - إسراء عبد السلام - فاطمة أحمد\nملك ممدوح - إيريني صموئيل - منة الله رمضان"), 
+                     font_size=22).shift(UP*0.2)
+
+        # 3. الإشراف (أ.د خالد الكيلاني ود/ علياء محمد)
+        boss = Text(fix("إشراف: أ.د/ خالد الكيلاني (مدير البرامج)"), color=YELLOW, font_size=26)
+        coordinator = Text(fix("منسق النشاط: د/ علياء محمد"), color=YELLOW_A, font_size=26).next_to(boss, DOWN, buff=0.3)
+        staff = VGroup(boss, coordinator).to_edge(DOWN, buff=0.6)
+
+        # --- الأنيميشن ---
+        self.play(Write(header))
+        self.play(Create(Underline(header, color=WHITE)))
+        self.wait(0.5)
+        
+        self.play(FadeIn(names, shift=UP))
+        self.wait(0.5)
+        
+        self.play(Write(staff))
+        self.play(Indicate(staff, color=GOLD))
+        
+        # ثبات في الآخر للحق القراءة
+        self.wait(5)
+
+# أمر التشغيل
+%manim -v WARNING -qm VideoEnding
