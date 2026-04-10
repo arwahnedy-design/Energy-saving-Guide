@@ -120,6 +120,10 @@ st.markdown(
 st.markdown("---")
 st.markdown(
     """
+# --- قسم الإهداء، الإشراف، وإعداد الطالبة (نهاية الصفحة) ---
+st.markdown("---")
+st.markdown(
+    """
     <div style='text-align: center; border: 2px solid #2e7d32; padding: 20px; border-radius: 15px; background-color: #ffffff; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);'>
         <p style='font-size: 18px; font-weight: bold; color: #1a5e20; margin-bottom: 10px;'>
             🎁 إهداء من طلبة كلية العلوم - جامعة مدينة السادات الأهلية
@@ -146,6 +150,8 @@ st.markdown(
     </div>
     """, 
     unsafe_allow_html=True
+)
+
 
     
 
