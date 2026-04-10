@@ -123,7 +123,11 @@ st.markdown(
 # --- قسم الإهداء، الإشراف، وإعداد الطالبة (نهاية الصفحة) ---
 st.markdown("---")
 st.markdown(
-    ""
+    "")
+    # --- القسم الرابع: الإهداء والإشراف وإعداد الطالبة ---
+st.markdown("---")
+st.markdown(
+    """
     <div style='text-align: center; border: 2px solid #2e7d32; padding: 20px; border-radius: 15px; background-color: #ffffff; margin-top: 20px; box-shadow: 2px 2px 12px rgba(0,0,0,0.1);'>
         <p style='font-size: 18px; font-weight: bold; color: #1a5e20; margin-bottom: 15px;'>
             إهداء من طلبة كلية العلوم - جامعة مدينة السادات الأهلية
@@ -131,7 +135,7 @@ st.markdown(
         
         <div style='background-color: #e8f5e9; padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #c8e6c9;'>
             <p style='margin-bottom: 5px; font-size: 16px; color: #333;'><b>إعداد الطالبة:</b></p>
-            <h2 style='color: #2e7d32; margin-top: 0; font-family: Cairo, sans-serif;'>أروى عطاء الدين عصام</h2>
+            <h2 style='color: #2e7d32; margin-top: 0;'>أروى عطاء الدين عصام</h2>
         </div>
 
         <hr style='border: 0.5px solid #eee;'>
@@ -148,9 +152,10 @@ st.markdown(
             </div>
         </div>
     </div>
-      """, 
-    unsafe_allow_html=True)
-    
+    """, 
+    unsafe_allow_html=True
+)
+
 
 
 
