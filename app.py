@@ -37,7 +37,7 @@ st.markdown("---")
 
 # --- القسم الثاني: تعليمات الترشيد المخصصة (التبويبات) ---
 st.header("📝 تعليمات الترشيد المخصصة")
-tab_students, tab_staff, tab_Faculty members= st.tabs(["🎓 قسم الطلاب", "💼 قسم الموظفين", "🧪 قسم أعضاء هيئة التدريس"])
+tab_students, tab_staff, tab_Faculty members== st.tabs(["🎓 قسم الطلاب", "💼 قسم الموظفين", "🧪 قسم أعضاء هيئة التدريس"])
 
 with tab_students:
     st.subheader("💡 نصائح ذهبية لطلاب جامعة السادات الأهلية")
