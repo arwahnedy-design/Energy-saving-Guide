@@ -146,7 +146,11 @@ with st.container():
         st.write("**منسق النشاط:**")
         st.write("#### د/ علياء محمد")
 
-st.balloons() # حركة احتفالية لما الموقع يفتح
+# حركة احتفالية تظهر مرة واحدة فقط عند فتح الموقع
+if 'balloons_done' not in st.session_state:
+    st.balloons()
+    st.session_state['balloons_done'] = True
+
 
 
 
